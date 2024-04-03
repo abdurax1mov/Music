@@ -214,17 +214,3 @@ function like_reds() {
 }
 
 
-// save.addEventListener("click", () => {
-//     fetch("/get_save", {
-//         method: "POST", headers: {
-//             "Content-Type": "application/json"
-//         }, body: JSON.stringify({
-//             "save_id": saveIcon[music_id].dataset.id,
-//         })
-//     })
-//         .then(response => response.json())
-//         .then(dateJson => {
-//
-//         })
-// })
-
