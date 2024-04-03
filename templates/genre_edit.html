@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>genre_edit</title>
+    <link rel="website icon" href="/static/img/headphones-solid.svg">
+    <link rel="stylesheet" href="/static/file_edit.css">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <div class="x"></div>
+        <a href="{{ url_for("music") }}">
+            <div class="home">
+                <div class="icon"></div>
+                <h1 class="text">Home page</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("save") }}">
+            <div class="home">
+                <div class="save"></div>
+                <h1 class="text">Save</h1>
+            </div>
+        </a>
+      <a href="{{ url_for("albom") }}">
+            <div class="home">
+                <div class="alboms"></div>
+                <h1 class="text">Albom</h1>
+            </div>
+        </a>
+      <a href="{{ url_for("xit_genre") }}">
+            <div class="home">
+                <div class="xit"></div>
+                <h1 class="text">Genre</h1>
+            </div>
+        </a>
+        {% if user.role =="director" %}
+            <a href="{{ url_for("add_music") }}">
+                <div class="home">
+                    <div class="music"></div>
+                    <h1 class="text">Create a music</h1>
+                </div>
+            </a>
+        {% endif %}
+        <a href="{{ url_for("like") }}">
+            <div class="home">
+                <div class="likes"></div>
+                <h1 class="text">Like</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("profile") }}">
+            <div class="home">
+                <div class="user"></div>
+                <h1 class="text">Profile</h1>
+            </div>
+        </a>
+
+
+        <a href="{{ url_for("login") }}">
+            <div class="home">
+                <div class="login"></div>
+                <h1 class="text1">Log out</h1>
+            </div>
+        </a>
+        <div class="x"></div>
+    </nav>
+</header>
+<div class="ho">
+    <div class="homes">
+        <div class="icons"></div>
+        <h1 class="texts">Create a folder</h1>
+    </div>
+</div>
+<div class="files">
+    <form action="{{ url_for("genre_edit", genre_id=genre.id) }}" method="post"
+          enctype="multipart/form-data">
+        <div class="add">
+            <img class="img3" src="{{ genre.img }}" alt="">
+            <input type="text" value="{{ genre.name }}" placeholder="Create a folder name" name="file_name">
+            <input type="file" placeholder="File img" name="img">
+            <button>Add</button>
+        </div>
+    </form>
+</div>
+<a href="{{ url_for("genre_music", genre_id=genre.id) }}" class="exit"></a>
+</body>
+</html>

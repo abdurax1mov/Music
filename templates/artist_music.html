@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Artist music</title>
+    <link rel="website icon" href="/static/img/headphones-solid.svg">
+    <link rel="stylesheet" href="/static/artist_music.css">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <div class="x"></div>
+        <a href="{{ url_for("music") }}">
+            <div class="home">
+                <div class="icon"></div>
+                <h1 class="text">Home page</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("save") }}">
+            <div class="home">
+                <div class="save"></div>
+                <h1 class="text">Save</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("albom") }}">
+            <div class="home">
+                <div class="alboms"></div>
+                <h1 class="text">Albom</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("xit_genre") }}">
+            <div class="home">
+                <div class="xit"></div>
+                <h1 class="text">Genre</h1>
+            </div>
+        </a>
+        {% if user.role=="director" or user.role=="artist" %}
+            <a href="{{ url_for("add_music") }}">
+                <div class="home">
+                    <div class="music"></div>
+                    <h1 class="text">Create a music</h1>
+                </div>
+            </a>
+        {% endif %}
+        <a href="{{ url_for("like") }}">
+            <div class="home">
+                <div class="likes"></div>
+                <h1 class="text">Like</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("profile") }}">
+            <div class="home">
+                <div class="user"></div>
+                <h1 class="text">Profile</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("login") }}">
+            <div class="home">
+                <div class="login"></div>
+                <h1 class="text1">Log out</h1>
+            </div>
+        </a>
+        <div class="x"></div>
+    </nav>
+</header>
+<div class="ho">
+    <div class="x1"></div>
+    <div class="homes">
+        <h1 class="texts">{{ artist.name }}</h1>
+        <h1 class="text3">Music {{ lens }}</h1>
+    </div>
+</div>
+<div class="files">
+    <div class="xx"></div>
+    <div class="file1">
+        {% for music in artist.music %}
+            <div class="musics">
+                <div class="img3">
+                    <img class="music_img" src="{{ music.img }}" alt="">
+                    <button class="play pause"></button>
+                </div>
+                <h1 class="music_text">{{ music.name }}</h1>
+                <h1 class="music_name">{{ music.user.name }}</h1>
+                <h1 class="music_te">{{ music.time }}</h1>
+                <h1 class="music_tex">{{ music.date }}</h1>
+                <form action="{{ url_for("add_artist_music", music_id=music.id, artists_id=music.artist) }}"
+                      method="post">
+                    {% if music.id in like_id %}
+                        <button data-id="{{ music.id }}" class="like_red likeIcon"></button>
+                    {% else %}
+                        <button data-id="{{ music.id }}" class="like_w likeIcon"></button>
+                    {% endif %}
+                </form>
+                <form action="{{ url_for("download", music_id=music.id, save_id=user.id) }}"
+                      method="post">
+                    <button data-id="{{ music.id }}" class="save_w download"></button>
+                </form>
+                {% if user.role =="director" or user.role=="artist" %}
+                    <a class="a" href="{{ url_for("edit_music_home", music_edit=music.id) }}">
+                        <button class="edit"></button>
+                    </a>
+                {% endif %}
+                <div class="pros12">
+                    <div class="progress1"></div>
+                </div>
+                <audio controls class="audio" hidden src="{{ music.music }}"></audio>
+            </div>
+        {% endfor %}
+        <div class="x5"></div>
+        <div class="mu">
+            <div class="prog">
+                <div class="progress"></div>
+            </div>
+            <div class="be">
+                <img class="img5"
+                     src="https://media.istockphoto.com/id/1175435360/vector/music-note-icon-vector-illustration.jpg?s=612x612&w=0&k=20&c=R7s6RR849L57bv_c7jMIFRW4H87-FjLB8sqZ08mN0OU="
+                     alt="Img">
+                <div class="names">
+                    <h1 class="names1">Music</h1>
+                    <h1 class="music_name1">Artist</h1>
+                </div>
+                <button class="prev"></button>
+
+                <button class="button"></button>
+
+                <button class="next"></button>
+                <button class="like"></button>
+                <a class="au" href="" methods="post">
+                    <button class="saves"></button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/static/audio.js"></script>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="/static/profile.css">
+    <link rel="website icon" href="../static/img/headphones-solid.svg">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <div class="x"></div>
+        <a href="{{ url_for("music") }}">
+            <div class="home">
+                <div class="icon"></div>
+                <h1 class="text">Home page</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("save") }}">
+            <div class="home">
+                <div class="save"></div>
+                <h1 class="text">Save</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("albom") }}">
+            <div class="home">
+                <div class="alboms"></div>
+                <h1 class="text">Albom</h1>
+            </div>
+        </a>
+      <a href="{{ url_for("xit_genre") }}">
+            <div class="home">
+                <div class="xit"></div>
+                <h1 class="text">Genre</h1>
+            </div>
+        </a>
+        {% if user.role=="director" or user.role=="artist" %}
+            <a href="{{ url_for("add_music") }}">
+                <div class="home">
+                    <div class="music"></div>
+                    <h1 class="text">Create a music</h1>
+                </div>
+            </a>
+        {% endif %}
+        <a href="{{ url_for("like") }}">
+            <div class="home">
+                <div class="likes"></div>
+                <h1 class="text">Like</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("profile") }}">
+            <div class="home">
+                <div class="user"></div>
+                <h1 class="text">Profile</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("login") }}">
+            <div class="home">
+                <div class="login"></div>
+                <h1 class="text1">Log out</h1>
+            </div>
+        </a>
+        <div class="x"></div>
+    </nav>
+</header>
+<div class="ho">
+    <div class="homes">
+        <div class="icons"></div>
+        <h1 class="texts">Profile</h1>
+    </div>
+     <h1 class="name">{{ user.name }} {{ user.surname }}</h1>
+</div>
+<div class="files">
+    <form action="{{ url_for("profile") }}" method="post" enctype="multipart/form-data">
+        <div class="add">
+            <input type="text" value="{{ user.username }}" placeholder="Username" name="username">
+            <input type="text" value="{{ user.name }}" placeholder="Name" name="name">
+            <input type="text" value="{{ user.surname }}" placeholder="Surname" name="surname">
+            <button>Add</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

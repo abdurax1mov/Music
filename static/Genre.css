@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background-image: url("/static/img/58479.jpg");
+    background-size: cover;
+}
+
+.header {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    border-right: 1px blue solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    width: 400px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.39);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.x {
+    width: 350px;
+    height: 50px;
+}
+
+.home {
+    width: 350px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.62);
+    border-radius: 10px;
+    box-shadow: 0 0 7px 3px greenyellow;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.home:hover {
+    box-shadow: 0 0 7px 3px red;
+    transition: 0.5s;
+    background-color: rgba(169, 255, 0, 0.76);
+}
+
+.home:hover .icon {
+    background-image: url("/static/icon/house-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 29px;
+    height: 26px;
+    background-image: url("/static/icon/house-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.text {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.xit {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/gita.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover.text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.save {
+    width: 31px;
+    height: 25px;
+    background-image: url("/static/icon/save.svg");
+    background-size: cover;
+    margin-left: 17px;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home:hover .save {
+    background-image: url("/static/icon/save_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.alboms {
+    width: 27px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.file {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .file {
+    background-image: url("/static/icon/file_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.music {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/music_icon.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .music {
+    background-image: url("/static/icon/music_icon_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.users {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user-tie-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.likes {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/like_black.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .users {
+    background-image: url("/static/icon/user-tie-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.user {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .user {
+    background-image: url("/static/icon/user_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.login {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/login.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .login {
+    background-image: url("/static/icon/login_red.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.text1 {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.home:hover .text1 {
+    color: red;
+    transition: 0.5s;
+}
+
+.ho {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.38);
+    border-bottom: 1px blue solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homes {
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-left: 340px;
+}
+
+.name{
+    font-family: Cambria;
+    font-size: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.icons {
+    width: 26px;
+    height: 26px;
+    background-image: url("/static/icon/git_gren.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.texts {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 15px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.files {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.xx {
+    width: 400px;
+    height: 300px;
+}
+
+.file1 {
+    width: 1500px;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.img {
+    width: 250px;
+    height: 270px;
+    background-color: rgba(1, 59, 250, 0.51);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px red solid;
+    transition: 0.5s;
+    animation-name: rotate1;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate1 {
+    0% {
+        border: 3px red dashed;
+    }
+    25% {
+        border: 3px rebeccapurple solid;
+    }
+    50% {
+        border: 3px aqua dashed;
+    }
+    75% {
+        border: 3px greenyellow solid;
+    }
+    100% {
+        border: 3px white dashed;
+    }
+}
+
+.img:hover {
+    border: 3px white solid;
+    transition: 0.5s;
+}
+
+.img:hover .img1 {
+    border: 3px white solid;
+    transition: 0.5s;
+}
+
+.text2 {
+    font-size: 25px;
+    font-family: Candara;
+    color: white;
+    margin-bottom: 5px;
+
+}
+
+.img1 {
+    width: 180px;
+    height: 180px;
+    border-radius: 100%;
+    border: 3px red solid;
+    margin-top: 10px;
+    animation-duration: 4s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.98, 0.98, 0, 0.2);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}

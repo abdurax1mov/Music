@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Music</title>
+    <link rel="stylesheet" href="/static/add_music.css">
+    <link rel="website icon" href="../static/img/headphones-solid.svg">
+</head>
+<body>
+<header class="header">
+    <nav>
+        <div class="x"></div>
+        <a href="{{ url_for("music") }}">
+            <div class="home">
+                <div class="icon"></div>
+                <h1 class="text">Home page</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("save") }}">
+            <div class="home">
+                <div class="save"></div>
+                <h1 class="text">Save</h1>
+            </div>
+        </a>
+      <a href="{{ url_for("albom") }}">
+            <div class="home">
+                <div class="alboms11"></div>
+                <h1 class="text">Albom</h1>
+            </div>
+        </a>
+      <a href="{{ url_for("xit_genre") }}">
+            <div class="home">
+                <div class="xit"></div>
+                <h1 class="text">Genre</h1>
+            </div>
+        </a>
+        {% if user.role =="director" %}
+            <a href="{{ url_for("add_music") }}">
+                <div class="home">
+                    <div class="music"></div>
+                    <h1 class="text">Create a music</h1>
+                </div>
+            </a>
+        {% endif %}
+        <a href="{{ url_for("like") }}">
+            <div class="home">
+                <div class="likes"></div>
+                <h1 class="text">Like</h1>
+            </div>
+        </a>
+        <a href="{{ url_for("profile") }}">
+            <div class="home">
+                <div class="user"></div>
+                <h1 class="text">Profile</h1>
+            </div>
+        </a>
+
+        <a href="{{ url_for("login") }}">
+            <div class="home">
+                <div class="login"></div>
+                <h1 class="text1">Log out</h1>
+            </div>
+        </a>
+        <div class="x"></div>
+    </nav>
+</header>
+<div class="ho">
+    <div class="homes">
+        <div class="icons"></div>
+        <h1 class="texts">Create a music</h1>
+    </div>
+     <h1 class="name">{{ user.name }} {{ user.surname }}</h1>
+</div>
+<div class="musics">
+    <div class="ge">
+        <div class="bos">
+            <div class="genre">
+                <div class="ico"></div>
+                <h1 class="ge1">Genre</h1>
+            </div>
+            <div class="albom">
+                <div class="ico1"></div>
+                <h1 class="ge1">Albom</h1>
+            </div>
+            <div class="artist">
+                <div class="ico2"></div>
+                <h1 class="ge1">Artist</h1>
+            </div>
+        </div>
+        <div class="bosh">
+            <div class="genre1">
+                {% for genres in genre %}
+                    <button class="genres">{{ genres.name }}</button>
+                {% endfor %}
+                <div class="addd">
+                    <h1 class="ge22">+</h1>
+                </div>
+            </div>
+            <div class="alboms1">
+                {% for file in files %}
+                    <button class="files">{{ file.name }}</button>
+                {% endfor %}
+                <div class="adds">
+                    <h1 class="ge22">+</h1>
+                </div>
+            </div>
+            <div class="artist1">
+                {% for use in users %}
+                    <button class="artists">{{ use.name }}</button>
+                {% endfor %}
+                <div class="ark_add">
+                    <h1 class="ge22">+</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <form action="{{ url_for("artist") }}" method="post">
+        <div class="artist_add">
+            <input type="text" placeholder="Username" name="username">
+            <input type="text" placeholder="Surname" name="surname">
+            <input type="text" placeholder="Name" name="name">
+            <input type="password" placeholder="Password" name="password">
+            <button>Add</button>
+        </div>
+    </form>
+    <form action="{{ url_for("genre") }}" method="post" enctype="multipart/form-data">
+        <div class="genre_add">
+            <input type="text" placeholder="Genre" name="genre_name">
+            <input type="file" name="img">
+            <button>Add</button>
+        </div>
+    </form>
+    <form action="{{ url_for("file") }}" method="post" enctype="multipart/form-data">
+        <div class="file_add">
+            <input type="text" placeholder="Create a folder name" name="file_name">
+            <input type="file" placeholder="File img" name="img">
+            <button>Add</button>
+        </div>
+    </form>
+    <form action="{{ url_for("add_music") }}" method="post" enctype="multipart/form-data">
+        <div class="add">
+            <input class="Genres" type="text" placeholder="Genre" name="genre">
+            <input class="alboms" type="text" name="file_name" placeholder="Albom">
+            <input class="artist7" type="text" name="artist" placeholder="Artist">
+            <input type="file" placeholder="File img" name="img">
+            <input type="text" placeholder="Music name" name="music_name">
+            <input style="display: none;" type="file" id="music" title="Music" placeholder="Music audio" name="music">
+            <label class="audio" for="music">Audio</label>
+            <input type="time" name="time">
+            <input type="date" name="date">
+            <button>Add</button>
+        </div>
+    </form>
+</div>
+<script src="/static/add_music.js"></script>
+</body>
+</html>

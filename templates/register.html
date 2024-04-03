@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+    <link rel="stylesheet" href="/static/register.css">
+     <link rel="website icon" href="../static/img/headphones-solid.svg">
+</head>
+<body>
+<form action="{{ url_for("register") }}" method="post">
+    <div class="register">
+        <h1 class="text">Music Register </h1>
+        <input type="text" placeholder="Username" name="username">
+        <input type="text" placeholder="Name" name="name">
+        <input type="text" placeholder="Surname" name="surname">
+        <input type="password" placeholder="Password" name="password">
+        <button>Next Login</button>
+        <a class="re" href="{{ url_for("login") }}">Agar accountingiz mavjud bo'lsa: Next Login</a>
+    </div>
+</form>
+</body>
+</html>

@@ -1,0 +1,769 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background-image: url("/static/img/FreeVector-Love-Music.jpg");
+    background-size: cover;
+}
+
+.header {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    border-right: 1px blue solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.save_w {
+    width: 50px;
+    height: 40px;
+    background-image: url("/static/icon/save_whete.svg");
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 50px;
+}
+
+nav {
+    width: 400px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.39);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.x {
+    width: 350px;
+    height: 50px;
+}
+
+.xit {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/gita.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home {
+    width: 350px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.62);
+    border-radius: 10px;
+    box-shadow: 0 0 7px 3px greenyellow;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.alboms {
+    width: 27px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover {
+    box-shadow: 0 0 7px 3px red;
+    transition: 0.5s;
+    background-color: rgba(169, 255, 0, 0.76);
+}
+
+.home:hover .icon {
+    background-image: url("/static/icon/house-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 29px;
+    height: 26px;
+    background-image: url("/static/icon/house-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.text {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.home:hover.text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.save {
+    width: 31px;
+    height: 25px;
+    background-image: url("/static/icon/save.svg");
+    background-size: cover;
+    margin-left: 17px;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home:hover .save {
+    background-image: url("/static/icon/save_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.home:hover .text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.file {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .file {
+    background-image: url("/static/icon/file_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.music {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/music_icon.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .music {
+    background-image: url("/static/icon/music_icon_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.users {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user-tie-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.likes {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/like_black.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .users {
+    background-image: url("/static/icon/user-tie-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.user {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .user {
+    background-image: url("/static/icon/user_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.login {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/login.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .login {
+    background-image: url("/static/icon/login_red.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.text1 {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.home:hover .text1 {
+    color: red;
+    transition: 0.5s;
+}
+
+.ho {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.38);
+    border-bottom: 1px blue solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homes {
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-left: 340px;
+}
+
+.name {
+    font-family: Cambria;
+    font-size: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.icons {
+    width: 32px;
+    height: 26px;
+    background-image: url("/static/icon/save_green.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.texts {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.files {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.xx {
+    width: 400px;
+    height: 300px;
+}
+
+.file1 {
+    width: 1500px;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.img {
+    width: 250px;
+    height: 270px;
+    background-color: rgba(1, 59, 250, 0.51);
+    margin-left: 20px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    border: 3px white solid;
+}
+
+.img1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    border: 3px red solid;
+    margin-top: 10px;
+}
+
+.text2 {
+    font-size: 25px;
+    font-family: Cambria;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.files {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.xx {
+    width: 400px;
+    height: 100px;
+}
+
+.file1 {
+    width: 1500px;
+    height: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.musics {
+    width: 1450px;
+    height: 120px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    transition: 0.2s;
+    border-radius: 5px;
+}
+
+.musics:hover {
+    border-right: 3px blue solid;
+    border-top: 3px blue solid;
+    border-left: 3px blue solid;
+    transition: 0.2s;
+    margin-left: 21px;
+    margin-bottom: 21px;
+}
+
+.musics:hover .music_text {
+    color: greenyellow;
+    transition: 0.2s;
+}
+
+.music_name {
+    font-family: Candara;
+    font-size: 30px;
+    color: white;
+    width: 250px;
+    height: 40px;
+}
+
+
+.img1 {
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px white solid;
+    margin-top: 10px;
+}
+
+.text2 {
+    font-size: 25px;
+    font-family: Cambria;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.music_img {
+    width: 80px;
+    height: 80px;
+    background-color: #FF0000;
+    border-radius: 100px;
+    background-size: cover;
+    box-shadow: 0 0 5px 4px blue;
+}
+
+.img3 {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 100px;
+}
+
+.music_text {
+    font-family: Cambria;
+    font-size: 30px;
+    color: white;
+    margin-left: 50px;
+    width: 300px;
+    transition: 1s;
+}
+
+.like_w {
+    width: 40px;
+    height: 40px;
+    background-image: url("/static/icon/like_white.svg");
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.like_red {
+    width: 40px;
+    height: 40px;
+    background-image: url("/static/icon/like_red.svg");
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+}
+
+
+.text3 {
+    font-family: Cambria;
+    font-size: 25px;
+    margin-left: 280px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.pen {
+    width: 30px;
+    height: 30px;
+    background-image: url("/static/icon/pen.svg");
+    background-size: cover;
+    margin-left: 600px;
+}
+
+.users {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user-tie-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .users {
+    background-image: url("/static/icon/user-tie-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.delete {
+    width: 40px;
+    height: 30px;
+    background-image: url("/static/icon/minus-solid (1).svg");
+    background-size: cover;
+    margin-left: 180px;
+    margin-top: -5px;
+}
+
+.audio {
+    width: 300px;
+    height: 30px;
+}
+
+.pro {
+    width: 1370px;
+    height: 5px;
+    background-color: white;
+    position: absolute;
+    bottom: 0;
+    border-radius: 10px;
+    margin-left: 10px;
+}
+
+.progress {
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: blue;
+}
+
+.x5 {
+    width: 500px;
+    height: 100px;
+}
+
+.mu {
+    position: fixed;
+}
+
+.mu {
+    width: 1400px;
+    height: 110px;
+    background-color: rgba(0, 0, 255, 0.84);
+    bottom: 0;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.be {
+    width: 1300px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.prev {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-image: url("/static/icon/circle-chevron-left-solid (1).svg");
+    background-size: cover;
+    box-shadow: 0 0 0 5px white;
+}
+
+.button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    background-image: url("/static/icon/play_solid.svg");
+    background-size: cover;
+    background-color: black;
+}
+
+.button_pause {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-image: url("/static/icon/pauser_white.svg");
+    background-size: cover;
+    background-color: black;
+}
+
+.white {
+    width: 60px;
+    height: 60px;
+    border: none;
+    background-image: url("/static/icon/pauser_white.svg");
+    background-size: cover;
+    background-color: black;
+}
+
+.next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: none;
+    background-image: url("/static/icon/circle-chevron-right-solid.svg");
+    background-size: cover;
+    box-shadow: 0 0 0 5px white;
+}
+
+.like {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("/static/icon/like_white.svg");
+    background-size: cover;
+    margin-left: 50px;
+}
+
+.save_w {
+    width: 50px;
+    height: 40px;
+    background-image: url("/static/icon/save_whete.svg");
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 50px;
+}
+
+.edit {
+    width: 30px;
+    height: 30px;
+    background-image: url("/static/icon/pen.svg");
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    margin-left: 50px;
+
+}
+
+.a {
+    margin-top: -60px;
+    text-decoration: none;
+}
+
+.pros12 {
+    width: 1400px;
+    height: 5px;
+    background-color: white;
+    bottom: 0;
+    position: absolute;
+    border-radius: 10px;
+    margin-left: 20px;
+
+}
+
+.play {
+    width: 50px;
+    height: 50px;
+    background-image: url("/static/icon/pause_gren.svg");
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+    border-radius: 50px;
+}
+
+.pause {
+    width: 50px;
+    height: 50px;
+    background-image: url("/static/icon/play_gren.svg");
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.08);
+    border: none;
+}
+
+.progress1 {
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: blue;
+}
+
+.like_w {
+    background-image: url("/static/icon/like_white.svg");
+}
+
+.like_red {
+    background-image: url("/static/icon/like_red.svg");
+}
+
+.likeIcon {
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    margin-left: 50px;
+}
+
+.saves {
+    width: 50px;
+    height: 40px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0);
+    background-image: url("/static/icon/save_whete.svg");
+    background-size: cover;
+}
+
+.names {
+    width: 510px;
+    height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.names1 {
+    font-family: Cambria;
+    font-size: 30px;
+    color: white;
+    width: 300px;
+    height: 40px;
+    margin-left: -20px;
+}
+
+.music_name1 {
+    font-family: Candara;
+    font-size: 30px;
+    color: white;
+    width: 250px;
+    height: 40px;
+}
+
+.img5 {
+    width: 80px;
+    height: 80px;
+    border-radius: 100px;
+    background-size: cover;
+    box-shadow: 0 0 5px 4px red;
+    animation-duration: 4s;
+    animation-name: rotate;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(0.98, 0.98, 0, 0.2);
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+.prog {
+    width: 1400px;
+    height: 5px;
+    box-shadow: 0 0 2px 4px greenyellow;
+    border-radius: 5px;
+    margin-top: -10px;
+    background-color: black;
+}
+
+.progress {
+    width: 0;
+    height: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: red;
+    color: black;
+}
+
+.music_te {
+    font-family: cursive;
+    font-size: 25px;
+    color: white;
+    margin-left: 50px;
+}
+
+.music_tex {
+    font-family: cursive;
+    font-size: 25px;
+    color: white;
+    margin-left: 100px;
+    width: 200px;
+}
+

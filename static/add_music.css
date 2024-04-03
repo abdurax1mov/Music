@@ -1,0 +1,639 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin: 0;
+    background-image: url("/static/img/151.jpg");
+    background-size: cover;
+}
+
+.header {
+    width: 400px;
+    height: 100%;
+    display: flex;
+    border-right: 1px blue solid;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav {
+    width: 400px;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.39);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+
+.x {
+    width: 350px;
+    height: 50px;
+}
+
+.home {
+    width: 350px;
+    height: 50px;
+    background-color: rgba(128, 128, 128, 0.62);
+    border-radius: 10px;
+    box-shadow: 0 0 7px 3px greenyellow;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+}
+.xit {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/gita.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+.home:hover {
+    box-shadow: 0 0 7px 3px red;
+    transition: 0.5s;
+    background-color: rgba(169, 255, 0, 0.76);
+}
+
+.home:hover .icon {
+    background-image: url("/static/icon/house-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.icon {
+    width: 29px;
+    height: 26px;
+    background-image: url("/static/icon/house-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.text {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.likes {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/like_black.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover.text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.save {
+    width: 31px;
+    height: 25px;
+    background-image: url("/static/icon/save.svg");
+    background-size: cover;
+    margin-left: 17px;
+    transition: 0.5s;
+}
+
+a {
+    text-decoration: none;
+}
+
+.home:hover .save {
+    background-image: url("/static/icon/save_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+.alboms11 {
+    width: 27px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .text {
+    color: rgba(0, 0, 255, 0.73);
+    transition: 0.5s;
+}
+
+.file {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .file {
+    background-image: url("/static/icon/file_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.music {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/music_icon.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .music {
+    background-image: url("/static/icon/music_icon_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.user {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .user {
+    background-image: url("/static/icon/user_blue.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.login {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/login.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .login {
+    background-image: url("/static/icon/login_red.svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+.text1 {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: black;
+}
+
+.home:hover .text1 {
+    color: red;
+    transition: 0.5s;
+}
+
+.ho {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.54);
+    border-bottom: 1px blue solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.name{
+    font-family: Cambria;
+    font-size: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}.homes {
+    width: 1200px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    margin-left: 300px;
+}
+
+.name{
+    font-family: Cambria;
+    font-size: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.icons {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/audio_green.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.texts {
+    font-family: Cambria;
+    font-size: 20px;
+    margin-left: 20px;
+    transition: 0.5s;
+    color: chartreuse;
+}
+
+.musics {
+    width: 100%;
+    height: 894px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.ge {
+    width: 500px;
+    height: 700px;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px greenyellow;
+    position: relative;
+    overflow: hidden;
+}
+
+.bos {
+    width: 500px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bosh {
+    width: 1500px;
+    height: 600px;
+    background-color: red;
+    display: flex;
+    transition: 1s;
+}
+
+
+.albom {
+    width: 150px;
+    height: 70px;
+    background-color: #B6B925;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.5s;
+}
+
+.albom:hover {
+    box-shadow: 0 0 5px 2px red;
+    transition: 0.5s;
+}
+
+.artist:hover {
+    box-shadow: 0 0 5px 2px red;
+    transition: 0.5s;
+}
+
+.artist {
+    width: 150px;
+    height: 70px;
+    background-color: #B6B925;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.genre1 {
+    width: 500px;
+    height: 600px;
+    background-image: url("/static/img/pop-music-dq4x3sozgmiy23kc.jpg");
+    background-size: cover;
+    -moz-border-radius-bottomleft: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.alboms1 {
+    width: 500px;
+    height: 600px;
+   background-image: url("/static/img/pop-music-f01k10z6pxxqnikt.jpg");
+    background-size: cover;
+    -moz-border-radius-bottomleft: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 1s;
+    position: relative;
+}
+
+.artist1 {
+    width: 500px;
+    height: 600px;
+  background-image: url("/static/img/5555.jpg");
+    background-size: cover;
+    -moz-border-radius-bottomleft: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.addd {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+
+.adds {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+.ark_add {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 50px;
+}
+
+.alboms2 {
+    transition: 1s;
+}
+
+.artist2 {
+    top: 100px;
+    right: 0;
+}
+
+.genres {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    margin-top: 30px;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: Cambria;
+}
+.files {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    margin-top: 30px;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: Cambria;
+}
+.artists {
+    width: 300px;
+    height: 50px;
+    background-color: darkblue;
+    margin-top: 30px;
+    border: 2px #B6B925 solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+    font-family: Cambria;
+}
+
+.genre {
+    width: 150px;
+    height: 70px;
+    background-color: #B6B925;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.genre:hover {
+    box-shadow: 0 0 5px 2px red;
+    transition: 0.5s;
+}
+
+.ico {
+    width: 19px;
+    height: 25px;
+    background-image: url("/static/icon/genre.svg");
+    background-size: cover;
+}
+
+.ico1 {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/file.svg");
+    background-size: cover;
+}
+
+.ico2 {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user-tie-solid.svg");
+    background-size: cover;
+}
+
+.ge1 {
+    color: blue;
+    font-size: 25px;
+    font-family: Cambria;
+    margin-left: 5px;
+}
+
+.ge2 {
+    color: white;
+    font-size: 25px;
+    font-family: Cambria;
+}
+
+.ge22 {
+    color: red;
+    font-size: 25px;
+    font-family: Cambria;
+}
+
+.genre_add {
+    width: 500px;
+    height: 700px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px greenyellow;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 50px;
+}
+
+.file_add {
+    width: 500px;
+    height: 700px;
+    background-color: black;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px greenyellow;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 50px;
+}
+
+.artist_add {
+    width: 500px;
+    height: 700px;
+    background-image: url("/static/img/artist.jpg");
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px greenyellow;
+    display: none;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    margin-top: -350px;
+    margin-left: 50px;
+}
+
+.flask {
+    display: flex;
+}
+
+.add {
+    width: 500px;
+    height: 700px;
+    background-color: rgba(0, 0, 255, 0.51);
+    border-radius: 10px;
+    box-shadow: 0 0 7px 5px greenyellow;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+input {
+    width: 430px;
+    height: 30px;
+    background-color: #B6B925;
+    border-radius: 7px;
+    outline: none;
+    border: 8px #B6B925 solid;
+    font-size: 20px;
+    box-shadow: 0 0 0 5px red;
+    font-family: Cambria;
+}
+
+.input {
+    width: 440px;
+    height: 45px;
+    background-color: #B6B925;
+    border-radius: 7px;
+    outline: none;
+    border: 8px #B6B925 solid;
+    font-size: 20px;
+    box-shadow: 0 0 0 5px red;
+    font-family: Cambria;
+}
+
+.audio {
+    width: 430px;
+    height: 30px;
+    background-color: #B6B925;
+    border-radius: 7px;
+    outline: none;
+    border: 8px #B6B925 solid;
+    font-size: 20px;
+    box-shadow: 0 0 0 5px red;
+    font-family: Cambria;
+}
+
+input::placeholder {
+    color: black;
+    font-family: Cambria;
+    margin-left: 20px;
+}
+
+.users {
+    width: 25px;
+    height: 25px;
+    background-image: url("/static/icon/user-tie-solid.svg");
+    background-size: cover;
+    margin-left: 20px;
+    transition: 0.5s;
+}
+
+.home:hover .users {
+    background-image: url("/static/icon/user-tie-solid (2).svg");
+    background-size: cover;
+    transition: 0.5s;
+}
+
+button {
+    width: 300px;
+    height: 45px;
+    background-color: greenyellow;
+    border-radius: 10px;
+    color: blue;
+    border: 4px red solid;
+    font-size: 20px;
+    font-family: Cambria;
+    box-shadow: 0 0 5px 2px white;
+}
